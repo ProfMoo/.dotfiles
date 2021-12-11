@@ -1,0 +1,18 @@
+#!/bin/bash
+
+############################################################################################
+# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
+############################################################################################
+
+DOTFILES_DIR="~/.dotfiles"
+
+# list of files/folders to symlink in homedir
+FILES_TO_SYMLINK=".Brewfile"
+
+# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
+for file in $FILES_TO_SYMLINK; do
+    FILE_LOCATION="$(pwd)/$file"
+    SYMLINK_LOCATION="$HOME/$file"
+    echo "Creating symlink to $FILE_LOCATION in $SYMLINK_LOCATION."
+    ln -s $FILE_LOCATION $SYMLINK_LOCATION
+done
