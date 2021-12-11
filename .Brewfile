@@ -6,4 +6,4 @@ brew "git"
 cask "google-chrome"
 cask "visual-studio-code"
 cask "discord"
-cask "roon"
+cask "roon", args: { require_sha: false }
