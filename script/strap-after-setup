@@ -2,16 +2,4 @@
 
 code --install-extension shan.code-settings-sync
 
-# How long you need to hold a key before it repeats
-defaults write -g InitialKeyRepeat -int 15
-
-# How quickly a keyrepeats after the initial threshold has been met
-defaults write -g KeyRepeat -int 2
-
-# Changes scroll direction of MacOS
-defaults write -g com.apple.swipescrolldirection -bool FALSE
-
-# Autohide dock
-defaults write com.apple.dock autohide -bool TRUE
-# Reduce time the dock takes to reveal and hide
-defaults write com.apple.dock autohide-time-modifier -float 0.25
+source ./macos_setup
