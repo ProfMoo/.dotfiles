@@ -2,5 +2,11 @@
 
 code --install-extension shan.code-settings-sync
 
-defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
-defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+# How long you need to hold a key before it repeats
+defaults write -g InitialKeyRepeat -int 15
+
+# How quickly a keyrepeats after the initial threshold has been met
+defaults write -g KeyRepeat -int 2
+
+# Changes scroll direction of MacOS
+defaults write -g com.apple.swipescrolldirection -bool FALSE
