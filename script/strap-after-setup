@@ -1,0 +1,5 @@
+#!/bin/bash
+
+code --install-extension shan.code-settings-sync
+
+echo "hello world"
