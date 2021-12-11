@@ -1,0 +1,7 @@
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
+[user]
+	name = Shane Moo
+	email = obshane96@gmail.com
