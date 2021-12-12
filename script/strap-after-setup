@@ -8,3 +8,5 @@ code --install-extension shan.code-settings-sync
 source ${__dir}/macos_setup
 
 source ${__dir}/tmux_setup
+
+source ${__dir}/kubernetes_setup

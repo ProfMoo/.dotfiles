@@ -13,6 +13,8 @@ brew "awscli"
 brew "kubie"
 brew "htop"
 brew "tfenv"
+brew "asdf"
+brew "bash_completion"
 
 cask "google-chrome"
 cask "visual-studio-code"
