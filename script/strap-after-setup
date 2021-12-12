@@ -10,3 +10,5 @@ source ${__dir}/macos_setup
 source ${__dir}/tmux_setup
 
 source ${__dir}/kubernetes_setup
+
+source ${__dir}/zsh_setup
