@@ -1,0 +1,4 @@
+export TERM=screen-256color
+
+# NEED OHMYZSH TMUX PLUGIN FOR THIS
+# ZSH_TMUX_AUTOSTART='true'

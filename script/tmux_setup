@@ -1,0 +1,5 @@
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+git clone https://github.com/erikw/tmux-powerline.git ~/.tmux/plugins/tmux-powerline
+git clone https://github.com/powerline/fonts.git --depth=1 ~/.tmux/plugins/tmux-powerline-fonts
+source ~/.tmux/plugins/tmux-powerline-fonts/install.sh
