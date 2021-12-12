@@ -70,19 +70,19 @@ defaults write -g com.apple.swipescrolldirection -bool FALSE
 # Enable lid wakeup
 sudo pmset -a lidwake 1
 
-# Sleep the display after 15 minutes on battery
-sudo pmset -b displaysleep 15
+# Sleep the display after 2 minutes on battery
+sudo pmset -b displaysleep 2
 # Sleep the system to sleep after 30 minutes on battery
 sudo pmset -b sleep 30
 # Hibernate the system 30 minutes after going to sleep on battery
 sudo pmset -b standbydelay 30
 
 # Sleep the display after 15 minutes while plugged in
-sudo pmset -b displaysleep 30
+sudo pmset -c displaysleep 30
 # Sleep the system to sleep after 30 minutes while plugged in
-sudo pmset -b sleep 120
+sudo pmset -c sleep 120
 # Hibernate the system 30 minutes after going to sleep while plugged in
-sudo pmset -b standbydelay 240
+sudo pmset -c standbydelay 240
 
 # Hibernation mode
 # 0: Disable hibernation (speeds up entering sleep mode)
