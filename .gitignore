@@ -1,0 +1,5 @@
+# Avoid checking in work-specific configuration to git
+work
+
+# Avoid checking in home-specific configuration to git
+home

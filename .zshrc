@@ -20,5 +20,8 @@ export PATH="$PATH:$HOME/.asdf/shims"
 [[ -s "$HOME/.zsh/autocompletion.zsh" ]] && source "$HOME/.zsh/autocompletion.zsh"
 [[ -s "$HOME/.zsh/fzf.zsh" ]] && source "$HOME/.zsh/fzf.zsh"
 
-# Addind krew to path
+# Checking for a work-specific folder (which won't be checked into Git) and then sourcing it
+[[ -d "$HOME/.zsh/work" ]] && [[ -s "$HOME/.zsh/work/init.zsh" ]] && source "$HOME/.zsh/work/init.zsh"
+
+# Adding krew to path
 # export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

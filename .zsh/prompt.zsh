@@ -4,7 +4,7 @@
 # init variables for better readability
 NEWLINE=$'\n'
  
-#load colors
+# load colors
 autoload colors && colors
 for COLOR in RED GREEN YELLOW BLUE MAGENTA CYAN BLACK WHITE; do
     eval $COLOR='%{$fg[${(L)COLOR}]%}'  #wrap colours between %{ %} to avoid weird gaps in autocomplete
