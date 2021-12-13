@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Create a variable that ensures we can run a script in the same directory no matter how this script is called
+__dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+source ${__dir}/make_symlinks
+source ${__dir}/install_and_run_strap

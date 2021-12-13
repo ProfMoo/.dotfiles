@@ -1,0 +1,12 @@
+# Download the "strap" tool and run it locally
+
+# Create a variable that ensures we can run a script in the same directory no matter how this script is called
+__dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# If strap isn't already downloaded, git clone it
+if [ ! -d "${__dir}/strap" ] 
+then
+    git clone https://github.com/MikeMcQuaid/strap
+fi
+
+bash ${__dir}/strap/bin/strap.sh

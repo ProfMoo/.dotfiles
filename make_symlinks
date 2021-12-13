@@ -16,3 +16,5 @@ for file in $FILES_TO_SYMLINK; do
     echo "Creating symlink to $FILE_LOCATION in $SYMLINK_LOCATION."
     ln -s $FILE_LOCATION $SYMLINK_LOCATION
 done
+
+# USE STRAP
