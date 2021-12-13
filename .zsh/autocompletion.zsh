@@ -2,7 +2,7 @@
 autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
 
-source ~/.zsh/bash-completions/kubie.bash
+# source ~/.zsh/bash-completions/kubie.bash
 
 # Helm autocomplete 
 source <(helm completion zsh)

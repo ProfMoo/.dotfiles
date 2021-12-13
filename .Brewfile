@@ -16,6 +16,7 @@ brew "tfenv"
 brew "asdf"
 brew "bash-completion"
 brew "fzf"
+brew "gnupg"
 
 cask "google-chrome"
 cask "visual-studio-code"
