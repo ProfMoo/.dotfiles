@@ -1,6 +1,7 @@
 # Setup
 
-## To use the dotfiles
-
-1. Git clone this repo into your $HOME directory (TODO: include one-liner here)
-2. `run`
+1. Install `brew`
+2. Install `git`
+```bash
+cd $HOME && git clone https://github.com/ProfMoo/.dotfiles && cd .dotfiles && ./install
+```

@@ -21,7 +21,7 @@ autoload -U +X compinit && compinit
 [[ -s "$HOME/.zsh/custom_aliases.zsh" ]] && source "$HOME/.zsh/custom_aliases.zsh"
 
 # Checking for a work-specific folder (which won't be checked into Git) and then sourcing it
-# [[ -d "$HOME/.zsh/work" ]] && [[ -s "$HOME/.zsh/work/init.zsh" ]] && source "$HOME/.zsh/work/init.zsh"
+# [[ -d "$HOME/.zsh/work" ]] && [-[ -s "$HOME/.zsh/work/init.zsh" ]] && source "$HOME/.zsh/work/init.zsh"
 
 # Checking for a home-specific folder (which won't be checked into Git) and then sourcing it
 [[ -d "$HOME/.zsh/home" ]] && [[ -s "$HOME/.zsh/home/init.zsh" ]] && source "$HOME/.zsh/home/init.zsh"
