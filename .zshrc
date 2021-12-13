@@ -18,7 +18,7 @@ autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
 
 # Check if given file exists. If true, source the file
-[[ -s "$HOME/.zsh/custom-aliases.zsh" ]] && source "$HOME/.zsh/custom-aliases.zsh"
+[[ -s "$HOME/.zsh/custom_aliases.zsh" ]] && source "$HOME/.zsh/custom_aliases.zsh"
 
 # Checking for a work-specific folder (which won't be checked into Git) and then sourcing it
 # [[ -d "$HOME/.zsh/work" ]] && [[ -s "$HOME/.zsh/work/init.zsh" ]] && source "$HOME/.zsh/work/init.zsh"
