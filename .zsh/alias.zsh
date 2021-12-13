@@ -1,15 +1,10 @@
 alias ls='ls -G'
 alias l='ls -1A'
 alias ll='ls -lah'
- 
-# editing configs
-alias ,ez='$EDITOR ~/.zshrc'
-alias ,ezz='$EDITOR ~/.zsh'
-alias ,sz='source ~/.zshrc'
 
 # common tools
-alias h='helm'
-alias k='kubectl'
+# alias h='helm'
+# alias k='kubectl'
 
 # watching resources in kubernetes
 alias wp='watch kubectl get pod'
