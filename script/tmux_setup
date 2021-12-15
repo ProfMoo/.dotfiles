@@ -4,4 +4,4 @@
 
 [[ ! -d "$HOME/.tmux/plugins/tmux-powerline" ]] && git clone https://github.com/erikw/tmux-powerline.git ~/.tmux/plugins/tmux-powerline
 [[ ! -d "$HOME/.tmux/plugins/tmux-powerline-fonts" ]] && git clone https://github.com/powerline/fonts.git --depth=1 ~/.tmux/plugins/tmux-powerline-fonts && \
-  source ~/.tmux/plugins/tmux-powerline-fonts/install.sh
+source ~/.tmux/plugins/tmux-powerline-fonts/install.sh

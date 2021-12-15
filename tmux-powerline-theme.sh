@@ -14,22 +14,22 @@ TMUX_POWERLINE_DEFAULT_RIGHTSIDE_SEPARATOR=${TMUX_POWERLINE_DEFAULT_RIGHTSIDE_SE
 # Format: segment_name background_color foreground_color [non_default_separator]
 
 if [ -z $TMUX_POWERLINE_LEFT_STATUS_SEGMENTS ]; then
-	TMUX_POWERLINE_LEFT_STATUS_SEGMENTS=(
-		"tmux_session_info 148 234" \
-		"hostname 33 0" \
-		"lan_ip 24 255 ${TMUX_POWERLINE_SEPARATOR_RIGHT_THIN}" \
-		"wan_ip 24 255" \
-	)
+    TMUX_POWERLINE_LEFT_STATUS_SEGMENTS=(
+        "tmux_session_info 148 234" \
+        "hostname 33 0" \
+        "lan_ip 24 255 ${TMUX_POWERLINE_SEPARATOR_RIGHT_THIN}" \
+        "wan_ip 24 255" \
+    )
 fi
 
 if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
-	TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
-		"pwd 89 211" \
-		"now_playing 234 37" \
-		"battery 137 127" \
-		"weather 37 255" \
-		"date_day 235 136" \
-		"date 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
-		"time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
-	)
+    TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
+        "pwd 89 211" \
+        "now_playing 234 37" \
+        "battery 137 127" \
+        "weather 37 255" \
+        "date_day 235 136" \
+        "date 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+        "time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+    )
 fi
