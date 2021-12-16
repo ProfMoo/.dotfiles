@@ -1,7 +1,22 @@
 #!/bin/bash
 
-# If oh-my-zsh is not already installed, install it
-if [ ! -d "$HOME/.oh-my-zsh" ]
-then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+# Input: The ZSH installation type
+
+if [ "$1" = "oh-my-zsh" ]; then
+    install_oh_my_zsh
+else
+    download_plugins_manually $(cat $HOME/.zsh/plugins)
 fi
+
+
+install_oh_my_zsh() {
+    # If oh-my-zsh is not already installed, install it
+    if [ ! -d "$HOME/.oh-my-zsh" ]
+    then
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+    fi
+}
+
+download_plugins_manually() {
+
+}
