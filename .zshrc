@@ -26,5 +26,7 @@ autoload -U +X compinit && compinit
 # Checking for a home-specific folder (which won't be checked into Git) and then sourcing it
 [[ -d "$HOME/.zsh/home" ]] && [[ -s "$HOME/.zsh/home/init.zsh" ]] && source "$HOME/.zsh/home/init.zsh"
 
+# source $HOME/.zsh/install "git gpg-agent ripgrep tmux colored-man-pages fzf vscode gh aws kubectl helm"
+
 # Adding krew to path
 # export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

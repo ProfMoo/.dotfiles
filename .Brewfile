@@ -24,3 +24,5 @@ cask "discord"
 cask "roon", args: { require_sha: false }
 cask "aws-vault"
 cask "iterm2"
+cask "minecraft", args: { require_sha: false }
+cask "gyazo"

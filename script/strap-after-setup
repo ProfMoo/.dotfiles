@@ -11,4 +11,4 @@ source ${__dir}/tmux_setup
 
 source ${__dir}/kubernetes_setup
 
-source ${__dir}/zsh_setup $(cat ${__dir}/config.txt)
+# source ${__dir}/zsh_setup $(cat ${__dir}/config.txt)

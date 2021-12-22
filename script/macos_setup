@@ -63,6 +63,9 @@ defaults write -g KeyRepeat -int 2
 # Changes scroll direction of MacOS
 defaults write -g com.apple.swipescrolldirection -bool FALSE
 
+# Increase mouse speed
+defaults write -g com.apple.mouse.scaling 5.0
+
 ###############################################################################
 # Energy Related                                                              #
 ###############################################################################

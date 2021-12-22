@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 alias ls='ls -G'
 alias l='ls -1A'
 alias ll='ls -lah'

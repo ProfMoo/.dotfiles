@@ -1,14 +1,13 @@
 #!/bin/bash
 
-# Create a variable that ensures we can run a script in the same directory no matter how this script is called
-__dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_NAME=:".dotfiles"
 
 # If .dotfiles folder doesn't already exist in $HOME, git clone it
 # This is included so that this script can be run from a fresh installation
-if [ ! -d "$HOME/.dotfiles" ] 
+if [ ! -d "$HOME/$REPO_NAME" ] 
 then
-    (cd $HOME && git clone https://github.com/ProfMoo/.dotfiles)
+    (cd $HOME && git clone https://github.com/ProfMoo/$REPO_NAME)
 fi
 
-source ${__dir}/make_symlinks
-source ${__dir}/install_tools
+source (cd $HOME && ./$REPO_NAME/make_symlinks)
+source (cd $HOME && ./$REPO_NAME/install_tools)
