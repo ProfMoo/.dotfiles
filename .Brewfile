@@ -17,6 +17,7 @@ brew "asdf"
 brew "bash-completion"
 brew "fzf"
 brew "gnupg"
+brew "watch"
 
 cask "google-chrome"
 cask "visual-studio-code"

@@ -1,12 +1,12 @@
 #!/bin/zsh
 
+# ls
 alias ls='ls -G'
 alias l='ls -1A'
 alias ll='ls -lah'
 
 # common tools
-# alias h='helm'
-# alias k='kubectl'
+alias h='helm'
 
 # watching resources in kubernetes
 alias wp='watch kubectl get pod'
