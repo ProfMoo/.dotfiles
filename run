@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPO_NAME=:".dotfiles"
+REPO_NAME=".dotfiles"
 
 # If .dotfiles folder doesn't already exist in $HOME, git clone it
 # This is included so that this script can be run from a fresh installation
@@ -9,5 +9,5 @@ then
     (cd $HOME && git clone https://github.com/ProfMoo/$REPO_NAME)
 fi
 
-source (cd $HOME && ./$REPO_NAME/make_symlinks)
-source (cd $HOME && ./$REPO_NAME/install_tools)
+source $HOME/$REPO_NAME/make_symlinks
+source $HOME/$REPO_NAME/install_tools

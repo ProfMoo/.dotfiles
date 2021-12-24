@@ -27,3 +27,4 @@ cask "aws-vault"
 cask "iterm2"
 cask "minecraft", args: { require_sha: false }
 cask "gyazo"
+cask "spotify"
