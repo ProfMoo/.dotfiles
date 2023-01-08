@@ -28,3 +28,7 @@ cask "iterm2"
 cask "minecraft", args: { require_sha: false }
 cask "gyazo"
 cask "spotify", args: { require_sha: false }
+cask "ledger-live", args: { requite_sha: false }
+cask "docker"
+
+## BRAVE BROWSER
