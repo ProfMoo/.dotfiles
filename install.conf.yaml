@@ -40,6 +40,10 @@
       force: true
       path: .Brewfile
 - shell:
+    - command: scripts/install_homebrew
+      description: Installing homebrew
+      stdout: true
+      stderr: true
     - command: scripts/install_tools
       description: Installing CLI tools
       stdout: true
