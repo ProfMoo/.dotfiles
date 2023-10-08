@@ -42,11 +42,13 @@
 - shell:
     - command: scripts/install_tools
       description: Installing CLI tools
-      stdin: true
+      stdout: true
+      stderr: true
+    - command: scripts/tmux_setup
+      description: Installing tmux plugins
       stdout: true
       stderr: true
     - command: source ~/.zshrc
       description: Sourcing .zshrc
-      stdin: true
       stdout: true
       stderr: true
