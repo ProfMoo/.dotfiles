@@ -8,7 +8,7 @@
     ~/.config:
       recursive: true
 - shell:
-    - command: bash pre-install
+    - command: bash zsh-install
       description: Installing zsh
       stdin: true
       stdout: true
@@ -30,13 +30,21 @@
     ~/.tmux.conf:
       force: true
       path: .tmux.conf
-    ~/.gitconfig:
-      force: true
-      path: .gitconfig
     ~/.tmux-powerlinerc:
       force: true
       path: .tmux-powerlinerc
+    ~/.gitconfig:
+      force: true
+      path: .gitconfig
+    ~/.Brewfile:
+      force: true
+      path: .Brewfile
 - shell:
+    - command: scripts/install_tools
+      description: Installing CLI tools
+      stdin: true
+      stdout: true
+      stderr: true
     - command: source ~/.zshrc
       description: Sourcing .zshrc
       stdin: true
