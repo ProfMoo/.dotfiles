@@ -2,11 +2,32 @@
     link:
       create: true
       relink: true
+- clean: ["~", "~/.config"]
 - shell:
-    - [sh pre-install.sh, Running pre installation script]
+    - command: bash pre-install
+      stdin: true
+      stdout: true
+      description: Running pre installation script
+    - command: git submodule update --init --recursive
+      stdin: true
+      stdout: true
+      description: Installing submodules
 - link:
     ~/.zshrc:
       force: true
       path: .zshrc
-- shell:
-    - [git submodule update --init --recursive, Installing submodules]
+    ~/.zprofile:
+      force: true
+      path: .zprofile
+    ~/.tmux.conf:
+      force: true
+      path: .tmux.conf
+    ~/.gitconfig:
+      force: true
+      path: .gitconfig
+    ~/.zsh:
+      force: true
+      path: .zsh
+    ~/.tmux-powerlinerc:
+      force: true
+      path: .tmux-powerlinerc
