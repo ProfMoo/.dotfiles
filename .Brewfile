@@ -1,6 +1,3 @@
-tap "homebrew/cask"
-cask_args appdir: "~/Applications", require_sha: true
-
 brew "git"
 brew "ripgrep"
 brew "tmux"
@@ -18,17 +15,3 @@ brew "bash-completion"
 brew "fzf"
 brew "gnupg"
 brew "watch"
-
-cask "google-chrome"
-cask "visual-studio-code"
-cask "discord"
-cask "roon", args: { require_sha: false }
-cask "aws-vault"
-cask "iterm2"
-cask "minecraft", args: { require_sha: false }
-cask "gyazo"
-cask "spotify", args: { require_sha: false }
-cask "ledger-live", args: { requite_sha: false }
-cask "docker"
-
-## BRAVE BROWSER

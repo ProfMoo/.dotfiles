@@ -13,11 +13,11 @@
       stdin: true
       stdout: true
       stderr: true
-    - command: chsh -s $(which zsh)
-      description: Making zsh the default shell
-      stdin: true
-      stdout: true
-      stderr: true
+    # - command: chsh -s $(which zsh)
+    #   description: Making zsh the default shell
+    #   stdin: true
+    #   stdout: true
+    #   stderr: true
     - command: git submodule update --init --recursive
       description: Installing submodules
       stdout: true
@@ -41,3 +41,9 @@
     ~/.tmux-powerlinerc:
       force: true
       path: .tmux-powerlinerc
+- shell:
+    - command: source ~/.zshrc
+      description: Sourcing .zshrc
+      stdin: true
+      stdout: true
+      stderr: true

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Check if zsh is installed
+# Ensure zsh is installed
 if ! hash zsh 2>/dev/null; then
     echo "zsh isn't installed. Installing now..."
     sudo apt install -y zsh
@@ -9,7 +9,7 @@ else
     echo "zsh already installed."
 fi
 
-# Check if oh-my-zsh is installed
+# Ensure oh-my-zsh is installed
 OMZDIR="$HOME/.oh-my-zsh"
 if [ ! -d "$OMZDIR" ]; then
     echo 'Installing oh-my-zsh...'
