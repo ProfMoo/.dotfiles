@@ -18,15 +18,9 @@ autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
 
 # Check if given file exists. If true, source the file
-# [[ -s "$HOME/.zsh/custom_aliases.zsh" ]] && source "$HOME/.zsh/custom_aliases.zsh"
+[[ -s "$HOME/.zsh/custom_aliases.zsh" ]] && source "$HOME/.zsh/custom_aliases.zsh"
 
-# Checking for a work-specific folder (which won't be checked into Git) and then sourcing it
-# [[ -d "$HOME/.zsh/work" ]] && [-[ -s "$HOME/.zsh/work/init.zsh" ]] && source "$HOME/.zsh/work/init.zsh"
-
-# Checking for a home-specific folder (which won't be checked into Git) and then sourcing it
-[[ -d "$HOME/.zsh/home" ]] && [[ -s "$HOME/.zsh/home/init.zsh" ]] && source "$HOME/.zsh/home/init.zsh"
-
-# source $HOME/.zsh/install "git gpg-agent ripgrep tmux colored-man-pages fzf vscode gh aws kubectl helm"
+source $HOME/.zsh/install "git gpg-agent ripgrep tmux colored-man-pages fzf vscode gh aws kubectl helm"
 
 # Adding krew to path
 # export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

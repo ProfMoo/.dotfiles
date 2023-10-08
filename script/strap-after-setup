@@ -5,8 +5,6 @@ __dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 code --install-extension shan.code-settings-sync
 
-source ${__dir}/macos_setup
-
 source ${__dir}/tmux_setup
 
 source ${__dir}/kubernetes_setup

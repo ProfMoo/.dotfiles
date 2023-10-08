@@ -1,0 +1,12 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+- shell:
+    - [sh pre-install.sh, Running pre installation script]
+- link:
+    ~/.zshrc:
+      force: true
+      path: .zshrc
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
