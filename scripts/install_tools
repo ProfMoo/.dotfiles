@@ -1,3 +1,21 @@
 #!/bin/zsh
 
-brew bundle --global
+echo "Checking CPU architecture to determine which installation tooling to use..."
+if [[ $(uname -a) == *x86_64* ]]; then
+    echo "Determined CPU architecture to be 'x86', using homebrew/Brewfile"
+
+    # Ensure homebrew is installed
+    which brew >/dev/null 2>&1
+    if [ $? -eq 1 ]; then
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    else
+        brew update
+    fi
+
+    brew bundle --global
+
+elif [[ $(uname -a) == *aarch64* ]]; then
+    echo "Determined CPU architecture to be 'ARM', using ..."
+else
+    echo "Unsupported/unknown CPU architecture"
+fi
