@@ -2,16 +2,26 @@
     link:
       create: true
       relink: true
-- clean: ["~", "~/.config"]
+- clean:
+    ~/:
+      force: true
+    ~/.config:
+      recursive: true
 - shell:
     - command: bash pre-install
+      description: Installing zsh
       stdin: true
       stdout: true
-      description: Running pre installation script
+      stderr: true
+    - command: chsh -s $(which zsh)
+      description: Making zsh the default shell
+      stdin: true
+      stdout: true
+      stderr: true
     - command: git submodule update --init --recursive
-      stdin: true
-      stdout: true
       description: Installing submodules
+      stdout: true
+      stderr: true
 - link:
     ~/.zshrc:
       force: true
@@ -19,15 +29,15 @@
     ~/.zprofile:
       force: true
       path: .zprofile
+    ~/.zsh:
+      force: true
+      path: .zsh
     ~/.tmux.conf:
       force: true
       path: .tmux.conf
     ~/.gitconfig:
       force: true
       path: .gitconfig
-    ~/.zsh:
-      force: true
-      path: .zsh
     ~/.tmux-powerlinerc:
       force: true
       path: .tmux-powerlinerc

@@ -1,3 +1,6 @@
+export ZSH=~/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
 # Changing zsh bindings to emacs mode. ctrl-e and ctrl-a now work on command line
 bindkey -e
 
@@ -18,9 +21,6 @@ autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
 
 # Check if given file exists. If true, source the file
-[[ -s "$HOME/.zsh/custom_aliases.zsh" ]] && source "$HOME/.zsh/custom_aliases.zsh"
+source "$HOME/.zsh/aliases.zsh"
 
-source $HOME/.zsh/install "git gpg-agent ripgrep tmux colored-man-pages fzf vscode gh aws kubectl helm"
-
-# Adding krew to path
-# export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+source "$HOME/.zsh/oh-my-zsh.zsh"
