@@ -19,7 +19,7 @@ elif [[ $(uname -a) == *aarch64* ]]; then
 
     apt update
 
-    apt install -y ripgrap
+    apt install -y ripgrep
     apt install -y tmux
 else
     echo "Unsupported/unknown CPU architecture"
