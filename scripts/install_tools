@@ -16,6 +16,11 @@ if [[ $(uname -a) == *x86_64* ]]; then
 
 elif [[ $(uname -a) == *aarch64* ]]; then
     echo "Determined CPU architecture to be 'ARM', using ..."
+
+    apt update
+
+    apt install -y ripgrap
+    apt install -y tmux
 else
     echo "Unsupported/unknown CPU architecture"
 fi
