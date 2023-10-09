@@ -24,3 +24,5 @@ autoload -U +X compinit && compinit
 source "$HOME/.zsh/aliases.zsh"
 
 source "$HOME/.zsh/oh-my-zsh.zsh"
+
+export FZF_BASE=$(which fzf)

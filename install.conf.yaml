@@ -8,7 +8,7 @@
     ~/.config:
       recursive: true
 - shell:
-    - command: bash zsh-install
+    - command: bash scripts/zsh-install
       description: Installing zsh
       stdin: true
       stdout: true
