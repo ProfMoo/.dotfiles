@@ -13,11 +13,6 @@
       stdin: true
       stdout: true
       stderr: true
-    - command: chsh -s $(`which zsh`) $USER
-      description: Set zsh as shell
-      stdin: true
-      stdout: true
-      stderr: true
     - command: git submodule update --init --recursive
       description: Installing submodules
       stdout: true
