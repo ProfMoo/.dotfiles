@@ -23,6 +23,6 @@ autoload -U +X compinit && compinit
 # Check if given file exists. If true, source the file
 source "$HOME/.zsh/aliases.zsh"
 
-source "$HOME/.zsh/oh-my-zsh.zsh"
-
 export FZF_BASE=$(which fzf)
+
+source "$HOME/.zsh/oh-my-zsh.zsh"

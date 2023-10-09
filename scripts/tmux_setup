@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+echo "Downloading and installing tmux plugins"
+
 [[ ! -d "$HOME/.tmux/plugins/tpm" ]] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 [[ ! -d "$HOME/.tmux/plugins/tmux-powerline" ]] && git clone https://github.com/erikw/tmux-powerline.git ~/.tmux/plugins/tmux-powerline
