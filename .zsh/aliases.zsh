@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# can be used to test if the aliases are working
+alias test='echo "test"'
+
 # ls
 alias ls='ls -G'
 alias l='ls -1A'
