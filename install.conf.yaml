@@ -8,8 +8,13 @@
     ~/.config:
       recursive: true
 - shell:
-    - command: bash scripts/zsh-install
+    - command: bash scripts/zsh_install
       description: Installing zsh
+      stdin: true
+      stdout: true
+      stderr: true
+    - command: chsh -s $(`which zsh`) $USER
+      description: Set zsh as default shell
       stdin: true
       stdout: true
       stderr: true
