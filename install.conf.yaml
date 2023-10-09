@@ -36,15 +36,15 @@
     ~/.gitconfig:
       force: true
       path: .gitconfig
-    ~/.Brewfile:
-      force: true
-      path: .Brewfile
+    # ~/.Brewfile:
+    #   force: true
+    #   path: .Brewfile
 - shell:
-    - command: scripts/install_tools
-      description: Installing CLI tools
-      stdin: true
-      stdout: true
-      stderr: true
+    # - command: scripts/install_tools
+    #   description: Installing CLI tools
+    #   stdin: true
+    #   stdout: true
+    #   stderr: true
     - command: scripts/tmux_setup
       description: Installing tmux plugins
       stdout: true
