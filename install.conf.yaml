@@ -47,6 +47,7 @@
     #   stderr: true
     - command: scripts/tmux_setup
       description: Installing tmux plugins
+      stdin: true
       stdout: true
       stderr: true
     - command: source ~/.zshrc
