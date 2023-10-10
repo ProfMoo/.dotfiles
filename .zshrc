@@ -7,10 +7,6 @@ bindkey -e
 # Setting default editor to VSCode
 export EDITOR='code -w'
 
-# Adding asdf bin location
-# asdf is a CLI manager mostly used to install multiple versions of the same tool
-export PATH="$PATH:$HOME/.asdf/shims"
-
 # Edit and source zsh configs quickly
 alias ,ez='$EDITOR ~/.zshrc'
 alias ,ezz='$EDITOR ~/.zsh'
@@ -20,9 +16,11 @@ alias ,sz='source ~/.zshrc'
 autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
 
-# Check if given file exists. If true, source the file
-source "$HOME/.zsh/aliases.zsh"
-
+# Telling the oh-my-zsh fzf plugin where to find fzf
 export FZF_BASE=$(which fzf)
 
+# Add aliases
+source "$HOME/.zsh/aliases.zsh"
+
+# Sourcing oh-my-zsh
 source "$HOME/.zsh/oh-my-zsh.zsh"
