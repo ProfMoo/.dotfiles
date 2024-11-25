@@ -14,3 +14,5 @@ brew "gnupg"
 brew "watch"
 brew "kubectl"
 brew "coreutils"
+
+cask "orbstack"

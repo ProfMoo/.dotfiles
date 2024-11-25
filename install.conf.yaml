@@ -38,9 +38,9 @@
     ~/.tmux-powerlinerc:
       force: true
       path: .tmux-powerlinerc
-    ~/.gitconfig:
-      force: true
-      path: .gitconfig
+    # ~/.gitconfig:
+    #   force: true
+    #   path: .gitconfig
     ~/.Brewfile:
       force: true
       path: .Brewfile
