@@ -41,9 +41,9 @@
     ~/.gitconfig:
       force: true
       path: .gitconfig
-    # ~/.Brewfile:
-    #   force: true
-    #   path: .Brewfile
+    ~/.Brewfile:
+      force: true
+      path: .Brewfile
 - shell:
     - command: scripts/install_tools
       description: Installing CLI tools
