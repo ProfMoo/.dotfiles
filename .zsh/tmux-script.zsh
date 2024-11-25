@@ -7,7 +7,7 @@ SESSION_NAME=$1
 echo "Session name: $SESSION_NAME"
 
 # Use full path to tmux
-TMUX_PATH="/usr/local/bin/tmux"
+TMUX_PATH="/opt/homebrew/bin/tmux"
 echo "Tmux path: $TMUX_PATH"
 
 # Check if tmux is available
