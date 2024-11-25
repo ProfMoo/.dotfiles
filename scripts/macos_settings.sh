@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Configured MacOS settings to my personal preference
+# NOTE: Most of these settings only take effect after a restart
+
 echo "Configuring macOS settings..."
 
 # Disable Key Accent Menu
