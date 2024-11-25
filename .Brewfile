@@ -17,6 +17,7 @@ brew "ripgrep"
 brew "watch"
 brew "ykman"
 brew "yq"
+brew "hadolint"
 
 cask "orbstack"
 cask "visual-studio-code"
