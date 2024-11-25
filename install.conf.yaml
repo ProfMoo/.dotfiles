@@ -8,18 +8,33 @@
     ~/.config:
       recursive: true
 - shell:
-    - command: bash scripts/zsh_install
-      description: Installing zsh
+    - description: Installing CLI tools & GUI programs
+      command: scripts/install_tools
       stdin: true
       stdout: true
       stderr: true
-    - command: bash scripts/tmux_install
-      description: Installing tmux
+    - description: Installing zsh
+      command: bash scripts/zsh_install
       stdin: true
       stdout: true
       stderr: true
-    - command: git submodule update --init --recursive
-      description: Installing submodules
+    - description: Installing tmux plugins
+      command: scripts/tmux_setup
+      stdin: true
+      stdout: true
+      stderr: true
+    - description: Sourcing .zshrc
+      command: source ~/.zshrc
+      stdout: true
+      stderr: true
+    - description: Installing submodules
+      command: git submodule update --init --recursive
+      stdin: true
+      stdout: true
+      stderr: true
+    - description: Update macOS settings
+      command: scripts/macos_settings.sh
+      stdin: true
       stdout: true
       stderr: true
 - link:
@@ -38,24 +53,6 @@
     ~/.tmux-powerlinerc:
       force: true
       path: .tmux-powerlinerc
-    # ~/.gitconfig:
-    #   force: true
-    #   path: .gitconfig
     ~/.Brewfile:
       force: true
       path: .Brewfile
-- shell:
-    - command: scripts/install_tools
-      description: Installing CLI tools
-      stdin: true
-      stdout: true
-      stderr: true
-    - command: scripts/tmux_setup
-      description: Installing tmux plugins
-      stdin: true
-      stdout: true
-      stderr: true
-    - command: source ~/.zshrc
-      description: Sourcing .zshrc
-      stdout: true
-      stderr: true
