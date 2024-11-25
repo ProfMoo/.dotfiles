@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "Yoooo22"
-
 SESSION_NAME=$1
 
 echo "Session name: $SESSION_NAME"
@@ -20,5 +18,3 @@ fi
 
 # Create or attach to the tmux session
 $TMUX_PATH new-session -A -s vscode-$SESSION_NAME -d
-
-echo "WTF"
