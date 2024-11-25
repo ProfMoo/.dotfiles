@@ -1,8 +1,7 @@
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-# Adding homebrew binaries to the PATH
-echo 'export PATH="/opt/homebrew/bin:$PATH"' >>~/.zshrc
+export PATH="/opt/homebrew/bin:$PATH"
 
 # Changing zsh bindings to emacs mode. ctrl-e and ctrl-a now work on command line
 bindkey -e
@@ -27,8 +26,3 @@ source "$HOME/.zsh/aliases.zsh"
 
 # Sourcing oh-my-zsh
 source "$HOME/.zsh/oh-my-zsh.zsh"
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/bin:$PATH"
