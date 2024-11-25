@@ -1,7 +1,11 @@
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
+# Add homebrew binaries to PATH
 export PATH="/opt/homebrew/bin:$PATH"
+
+# Add golang binaries to PATH
+export PATH="$PATH:$HOME/go/bin:/usr/local/go/bin"
 
 # Changing zsh bindings to emacs mode. ctrl-e and ctrl-a now work on command line
 bindkey -e

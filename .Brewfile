@@ -18,6 +18,7 @@ brew "watch"
 brew "ykman"
 brew "yq"
 brew "hadolint"
+brew "go"
 
 cask "orbstack"
 cask "visual-studio-code"
