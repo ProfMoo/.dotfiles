@@ -1,5 +1,5 @@
-brew "ripgrep"
 brew "tmux"
+brew "ripgrep"
 brew "jq"
 brew "yq"
 brew "helm"

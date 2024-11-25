@@ -13,14 +13,25 @@ if [[ $(uname -a) == *x86_64* ]]; then
     fi
 
     brew bundle --global
-
 elif [[ $(uname -a) == *aarch64* ]]; then
-    echo "Determined CPU architecture to be 'ARM', using ..."
+    echo "Determined CPU architecture to be 'ARM' and OS to be Linux, using ..."
 
     apt update
 
     apt install -y ripgrep
     apt install -y tmux
+elif [[ $(uname -a) == *arm64* ]]; then
+    echo "Determined CPU architecture to be 'ARM' and OS to be MacOS, using ..."
+
+    # Ensure homebrew is installed
+    which brew >/dev/null 2>&1
+    if [ $? -eq 1 ]; then
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    else
+        brew update
+    fi
+
+    brew bundle --global
 else
     echo "Unsupported/unknown CPU architecture"
 fi
