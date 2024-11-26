@@ -1,25 +1,29 @@
 tap "homebrew/bundle"
 
+# Install core CLI tools
 brew "tmux"
-brew "awscli"
 brew "bash-completion"
 brew "coreutils"
 brew "diff-so-fancy"
 brew "fzf"
 brew "gh"
 brew "gnupg"
-brew "helm"
 brew "htop"
 brew "jq"
-brew "kubernetes-cli"
-brew "kubie"
 brew "ripgrep"
 brew "watch"
 brew "ykman"
 brew "yq"
+
+# Install tech-specific tooling
+brew "temporal"
 brew "hadolint"
 brew "go"
 brew "kubectx"
+brew "kubernetes-cli"
+brew "kubie"
+brew "helm"
+brew "awscli"
 
 cask "orbstack"
 cask "visual-studio-code"
