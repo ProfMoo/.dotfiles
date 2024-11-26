@@ -19,6 +19,7 @@ brew "ykman"
 brew "yq"
 brew "hadolint"
 brew "go"
+brew "kubectx"
 
 cask "orbstack"
 cask "visual-studio-code"

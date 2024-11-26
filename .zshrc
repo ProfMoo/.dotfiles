@@ -16,6 +16,7 @@ plugins=(
     helm
     docker
     golang
+    kube-ps1
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -42,9 +43,26 @@ export GOPATH="$HOME/go"
 export PATH="$PATH:${GOPATH}/bin"
 export GO111MODULE=on
 
+# Adding the Kubernetes context to the prompt
+PROMPT='$(kube_ps1)'$PROMPT
+
 # Needed so that zsh can use most bash completion scripts
 autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
+
+######################################################################################
+### Ensure as many commands are written to the same shared zsh history as possible ###
+######################################################################################
+
+# Append to the history file, don't overwrite it
+setopt APPEND_HISTORY
+# Write to the history file immediately, not when the shell exits
+setopt INC_APPEND_HISTORY
+# Share history across all sessions
+setopt SHARE_HISTORY
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
 
 # Add any work-related configuration here
 # Some stuff doesn't make sense (or isn't a good idea) to check into a public repo.
