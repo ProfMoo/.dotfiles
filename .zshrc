@@ -37,6 +37,11 @@ alias ,ez='$EDITOR ~/.zshrc'
 alias ,ezz='$EDITOR ~/.zsh'
 alias ,sz='source ~/.zshrc'
 
+# Setting the GOPATH and adding the GO install location to path
+export GOPATH="$HOME/go"
+export PATH="$PATH:${GOPATH}/bin"
+export GO111MODULE=on
+
 # Needed so that zsh can use most bash completion scripts
 autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
