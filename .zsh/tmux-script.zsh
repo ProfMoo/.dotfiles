@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This script is used in VSCode to spin up a new tmux session for each VSCode window.
+# The session name is passed as an argument to the script and is derived from the VSCode project that's open.
+
 SESSION_NAME=$1
 
 echo "Session name: $SESSION_NAME"

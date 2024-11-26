@@ -1,9 +1,11 @@
+#!/bin/bash
+
 # Configuration file for tmux-powerline.
 
-# Pointing tmux-powerline to the 'tmux-powerline-theme' file in this repo
+# Pointing tmux-powerline to the 'tmux-powerline-theme' file in this repo, which is symlinked to the home directory
 export TMUX_POWERLINE_THEME="tmux-powerline-theme"
-# Where to look for the theme file(s)
-export TMUX_POWERLINE_DIR_USER_THEMES="~/.dotfiles"
+# Where to look for the theme file(s), which are symlinked to the home directory
+export TMUX_POWERLINE_DIR_USER_THEMES="~/.tmux/themes"
 
 # How to display battery remaining. Can be {percentage, cute}.
 export TMUX_POWERLINE_SEG_BATTERY_TYPE="percentage"
@@ -23,7 +25,7 @@ export TMUX_POWERLINE_SEG_PWD_MAX_LEN="40"
 ###############
 ### WEATHER ###
 ###############
-# NOTE: Yahoo has deprecated its weather endpoint :(. I keep this configuration here to tmux-powerline doesn't error out
+# NOTE: Yahoo has deprecated its weather endpoint :(. I keep this configuration here so tmux-powerline doesn't error out
 
 # The data provider to use. Currently only "yahoo" is supported.
 export TMUX_POWERLINE_SEG_WEATHER_DATA_PROVIDER="yahoo"

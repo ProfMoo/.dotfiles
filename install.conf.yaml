@@ -14,17 +14,13 @@
       stdout: true
       stderr: true
     - description: Installing zsh
-      command: bash scripts/zsh_install
+      command: bash scripts/install_zsh
       stdin: true
       stdout: true
       stderr: true
-    - description: Installing tmux plugins
-      command: scripts/tmux_setup
+    - description: Installing tmux plugin manager (tpm)
+      command: scripts/install_tpm
       stdin: true
-      stdout: true
-      stderr: true
-    - description: Sourcing .zshrc
-      command: source ~/.zshrc
       stdout: true
       stderr: true
     - description: Installing submodules
@@ -33,8 +29,20 @@
       stdout: true
       stderr: true
     - description: Update macOS settings
-      command: scripts/macos_settings.sh
+      command: scripts/macos_settings
       stdin: true
+      stdout: true
+      stderr: true
+    - description: Sourcing .zshrc
+      command: source ~/.zshrc
+      stdout: true
+      stderr: true
+    # - description: Source tmux shell commands
+    #   command: source ~/.tmux-powerline
+    #   stdout: true
+    #   stderr: true
+    - description: Sourcing .tmux.conf
+      command: tmux source-file ~/.tmux.conf
       stdout: true
       stderr: true
 - link:
@@ -50,9 +58,12 @@
     ~/.tmux.conf:
       force: true
       path: .tmux.conf
-    ~/.tmux-powerlinerc:
-      force: true
-      path: .tmux-powerlinerc
+    # ~/.tmux-powerline:
+    #   force: true
+    #   path: .tmux-powerline
+    # ~/.tmux/themes:
+    #   force: true
+    #   path: .tmux/themes
     ~/.Brewfile:
       force: true
       path: .Brewfile
