@@ -21,3 +21,6 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# Setting up fzf fuzzy finding
+source <(fzf --key-bindings --history)
