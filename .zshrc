@@ -1,4 +1,23 @@
-export ZSH=~/.oh-my-zsh
+# oh-my-zsh configuration
+export ZSH=$HOME/.oh-my-zsh
+
+ZSH_THEME="blinks"
+
+plugins=(
+    git
+    gpg-agent
+    tmux
+    colored-man-pages
+    fzf
+    vscode
+    gh
+    aws
+    kubectl
+    helm
+    docker
+    golang
+)
+
 source $ZSH/oh-my-zsh.sh
 
 # Add homebrew binaries to PATH
@@ -30,3 +49,6 @@ source "$HOME/.zsh/aliases.zsh"
 
 # Sourcing my oh-my-zsh file
 source "$HOME/.zsh/oh-my-zsh.zsh"
+
+# Setting up fzf fuzzy finding
+source <(fzf --history)
