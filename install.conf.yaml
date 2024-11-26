@@ -59,4 +59,4 @@
       path: .Brewfile
     ~/.config/tmux-powerline/config.sh:
       force: true
-      path: config.sh
+      path: tmux-powerline-config.sh
