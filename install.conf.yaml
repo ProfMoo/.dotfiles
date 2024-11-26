@@ -37,10 +37,6 @@
       command: source ~/.zshrc
       stdout: true
       stderr: true
-    # - description: Source tmux shell commands
-    #   command: source ~/.tmux-powerline
-    #   stdout: true
-    #   stderr: true
     - description: Sourcing .tmux.conf
       command: tmux source-file ~/.tmux.conf
       stdout: true
@@ -58,12 +54,9 @@
     ~/.tmux.conf:
       force: true
       path: .tmux.conf
-    # ~/.tmux-powerline:
-    #   force: true
-    #   path: .tmux-powerline
-    # ~/.tmux/themes:
-    #   force: true
-    #   path: .tmux/themes
     ~/.Brewfile:
       force: true
       path: .Brewfile
+    ~/.config/tmux-powerline/config.sh:
+      force: true
+      path: config.sh
