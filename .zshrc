@@ -56,6 +56,3 @@ export FZF_BASE=$(which fzf)
 
 # Add aliases
 source "$HOME/.zsh/aliases.zsh"
-
-# Setting up fzf fuzzy finding
-source <(fzf --history)
