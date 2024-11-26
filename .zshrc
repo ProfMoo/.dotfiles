@@ -41,6 +41,11 @@ alias ,sz='source ~/.zshrc'
 autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
 
+# Add any work-related configuration here
+# Some stuff doesn't make sense (or isn't a good idea) to check into a public repo.
+# Check if given file exists. If true, source the file
+[[ -s "$HOME/.work/general.zsh" ]] && source "$HOME/.work/general.zsh"
+
 # Telling the oh-my-zsh fzf plugin where to find fzf
 export FZF_BASE=$(which fzf)
 
