@@ -22,3 +22,4 @@ brew "go"
 
 cask "orbstack"
 cask "visual-studio-code"
+cask "gather"
