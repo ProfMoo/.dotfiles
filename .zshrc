@@ -47,8 +47,5 @@ export FZF_BASE=$(which fzf)
 # Add aliases
 source "$HOME/.zsh/aliases.zsh"
 
-# Sourcing my oh-my-zsh file
-source "$HOME/.zsh/oh-my-zsh.zsh"
-
 # Setting up fzf fuzzy finding
 source <(fzf --history)
