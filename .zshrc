@@ -64,6 +64,12 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=10000
 export SAVEHIST=10000
 
+# Adding flux shell completion
+. <(flux completion zsh)
+
+# Adding cilium shell completion
+. <(cilium completion zsh)
+
 # Add any work-related configuration here
 # Some stuff doesn't make sense (or isn't a good idea) to check into a public repo.
 # Check if given file exists. If true, source the file

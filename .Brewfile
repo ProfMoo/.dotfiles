@@ -25,6 +25,8 @@ brew "kubernetes-cli"
 brew "kubie"
 brew "helm"
 brew "awscli"
+brew "flux"
+brew "cilium-cli"
 
 # Install a few helpful GUI apps
 cask "orbstack"
