@@ -43,9 +43,6 @@ export GOPATH="$HOME/go"
 export PATH="$PATH:${GOPATH}/bin"
 export GO111MODULE=on
 
-# Adding the Kubernetes context to the prompt
-PROMPT='$(kube_ps1)'$PROMPT
-
 # Needed so that zsh can use most bash completion scripts
 autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
