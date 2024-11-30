@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # can be used to test if the aliases are working
-alias tst='echo "test"'
+alias tst='echo "success!"'
 
 # ls
 alias ls='ls -G'
