@@ -33,6 +33,11 @@
       stdin: true
       stdout: true
       stderr: true
+    - description: Install golang tooling
+      command: scripts/install_golang_tooling
+      stdin: true
+      stdout: true
+      stderr: true
     - description: Sourcing .zshrc
       command: source ~/.zshrc
       stdout: true
