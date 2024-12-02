@@ -14,6 +14,9 @@ defaults write -g com.apple.scrollwheel.scaling -float 20.0
 # Set key repeat speed (after key repeat delay is hit)
 defaults write -g KeyRepeat -float 1.0
 
+# Don't rearrange the workspaces automatically based on recent use - maintain manual ordering
+defaults write com.apple.dock auto-arrange-spaces -bool NO
+
 # Restart necessary services to apply changes
 killall cfprefsd
 
