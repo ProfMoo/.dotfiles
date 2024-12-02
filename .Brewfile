@@ -26,6 +26,7 @@ brew "helm"
 brew "awscli"
 brew "flux"
 brew "cilium-cli"
+brew "node"
 
 # Install a few helpful GUI apps
 cask "orbstack"
