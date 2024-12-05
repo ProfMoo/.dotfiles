@@ -5,12 +5,12 @@ export ZSH=$HOME/.oh-my-zsh
 # and subprocesses can access the same PATH. This is particularly important since critical tools (such as tmux)
 # are installed via Homebrew and might not be accessible by default PATH variables.
 
-# Setting the GOPATH and adding the GO install location to path
-export GOPATH="$HOME/go"
-export PATH="$PATH:${GOPATH}/bin"
-
 # Add homebrew binaries to PATH
 export PATH="/opt/homebrew/bin:$PATH"
+
+# Setting the GOPATH and adding the GO install location to path
+export GOPATH="${HOME}/go"
+export PATH="$PATH:${GOPATH}/bin"
 
 ZSH_THEME="blinks"
 
