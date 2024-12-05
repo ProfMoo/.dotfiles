@@ -1,6 +1,17 @@
 # oh-my-zsh configuration
 export ZSH=$HOME/.oh-my-zsh
 
+# Setting PATH correctly at the top of .zshrc to ensure that all subshells
+# and subprocesses can access the same PATH. This is particularly important since critical tools (such as tmux)
+# are installed via Homebrew and might not be accessible by default PATH variables.
+
+# Setting the GOPATH and adding the GO install location to path
+export GOPATH="$HOME/go"
+export PATH="$PATH:${GOPATH}/bin"
+
+# Add homebrew binaries to PATH
+export PATH="/opt/homebrew/bin:$PATH"
+
 ZSH_THEME="blinks"
 
 plugins=(
@@ -21,12 +32,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# Add homebrew binaries to PATH
-export PATH="/opt/homebrew/bin:$PATH"
-
-# Add golang binaries to PATH
-export PATH="$PATH:$HOME/go/bin:/usr/local/go/bin"
-
 # Changing zsh bindings to emacs mode. ctrl-e and ctrl-a now work on command line
 bindkey -e
 
@@ -38,9 +43,7 @@ alias ,ez='$EDITOR ~/.zshrc'
 alias ,ezz='$EDITOR ~/.zsh'
 alias ,sz='source ~/.zshrc'
 
-# Setting the GOPATH and adding the GO install location to path
-export GOPATH="$HOME/go"
-export PATH="$PATH:${GOPATH}/bin"
+# No reason to use anything besides go modules in 2024.
 export GO111MODULE=on
 
 # Enable bash-style completion scripts in Zsh
