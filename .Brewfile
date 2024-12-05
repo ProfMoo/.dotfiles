@@ -1,7 +1,11 @@
+# File outlining all the tools and applications to install via Brewfile.
+
+# Need to install core to be able to tap other tools
 tap "homebrew/bundle"
 
 # Install core CLI tools
 brew "tmux"
+brew "tpm"
 brew "bash-completion"
 brew "coreutils"
 brew "diff-so-fancy"
@@ -24,7 +28,9 @@ brew "kubernetes-cli"
 brew "kubie"
 brew "helm"
 brew "awscli"
-brew "flux"
+# This installs the FluxCD CLI (be careful of the normal brew 'flux', which installs something else)
+tap "fluxcd/tap"
+brew "fluxcd/tap/flux"
 brew "cilium-cli"
 brew "node"
 

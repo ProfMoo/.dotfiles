@@ -3,6 +3,8 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="blinks"
 
+echo "echo1"
+
 plugins=(
     git
     gpg-agent
@@ -30,6 +32,8 @@ export PATH="$PATH:$HOME/go/bin:/usr/local/go/bin"
 # Changing zsh bindings to emacs mode. ctrl-e and ctrl-a now work on command line
 bindkey -e
 
+echo "echo2"
+
 # Setting default editor to VSCode
 export EDITOR='code -w'
 
@@ -43,9 +47,15 @@ export GOPATH="$HOME/go"
 export PATH="$PATH:${GOPATH}/bin"
 export GO111MODULE=on
 
-# Needed so that zsh can use most bash completion scripts
+echo "echo3"
+
+# Enable bash-style completion scripts in Zsh
 autoload -U +X bashcompinit && bashcompinit
+
+# Initialize Zsh completion system
 autoload -U +X compinit && compinit
+
+echo "echo3.5"
 
 ######################################################################################
 ### Ensure as many commands are written to the same shared zsh history as possible ###
@@ -61,11 +71,15 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=10000
 export SAVEHIST=10000
 
+echo "echo3.75"
+
 # Adding flux shell completion
 . <(flux completion zsh)
 
 # Adding cilium shell completion
 . <(cilium completion zsh)
+
+echo "echo4"
 
 # Add any work-related configuration here
 # Some stuff doesn't make sense (or isn't a good idea) to check into a public repo.

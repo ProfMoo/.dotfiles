@@ -8,6 +8,11 @@
     ~/.config:
       recursive: true
 - shell:
+    - description: Installing submodules
+      command: git submodule update --init --recursive
+      stdin: true
+      stdout: true
+      stderr: true
     - description: Installing CLI tools & GUI programs
       command: scripts/install_tools
       stdin: true
@@ -15,16 +20,6 @@
       stderr: true
     - description: Installing zsh
       command: bash scripts/install_zsh
-      stdin: true
-      stdout: true
-      stderr: true
-    - description: Installing tmux plugin manager (tpm)
-      command: scripts/install_tpm
-      stdin: true
-      stdout: true
-      stderr: true
-    - description: Installing submodules
-      command: git submodule update --init --recursive
       stdin: true
       stdout: true
       stderr: true
