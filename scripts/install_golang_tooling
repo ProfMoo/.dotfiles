@@ -1,3 +1,3 @@
 #!/bin/zsh
 
-go install -v github.com/go-delve/delve/cmd/dlv@latest
+sudo go install -v github.com/go-delve/delve/cmd/dlv@latest
