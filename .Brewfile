@@ -33,7 +33,6 @@ tap "fluxcd/tap"
 brew "fluxcd/tap/flux"
 brew "cilium-cli"
 brew "node"
-brew "rust"
 
 # Install a few helpful GUI apps
 cask "orbstack"
