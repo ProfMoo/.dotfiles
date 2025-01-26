@@ -28,6 +28,7 @@ plugins=(
     docker
     golang
     kube-ps1
+    talosctl
 )
 
 source $ZSH/oh-my-zsh.sh
