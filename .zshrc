@@ -12,6 +12,9 @@ export PATH="/opt/homebrew/bin:$PATH"
 export GOPATH="${HOME}/go"
 export PATH="$PATH:${GOPATH}/bin"
 
+# Adding kubectl krew plugin path to PATH
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 ZSH_THEME="blinks"
 
 plugins=(
