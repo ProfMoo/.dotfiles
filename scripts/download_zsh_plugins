@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+PLUGIN_DIR="$HOME/.oh-my-zsh/custom/plugins/talosctl"
+
+if [ ! -d "$PLUGIN_DIR" ]; then
+    echo "Installing talosctl plugin..."
+    git clone https://github.com/rusmephist/talosctl-zsh-plugin.git "$PLUGIN_DIR"
+else
+    echo "talosctl plugin already installed"
+fi

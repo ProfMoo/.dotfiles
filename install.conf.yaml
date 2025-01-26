@@ -33,6 +33,10 @@
       stdin: true
       stdout: true
       stderr: true
+    - description: Downloading zsh plugins
+      command: bash scripts/download_zsh_plugins
+      stdout: true
+      stderr: true
     - description: Sourcing .zshrc
       command: source ~/.zshrc
       stdout: true
