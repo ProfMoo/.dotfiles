@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 # Setting PATH correctly at the top of .zshrc to ensure that all subshells
 # and subprocesses can access the same PATH. This is particularly important since critical tools (such as tmux)
-# are installed via Homebrew and might not be accessible by default PATH variables.
+# are called later in the installation process and might not be accessible by default PATH variables.
 
 # Add homebrew binaries to PATH
 export PATH="/opt/homebrew/bin:$PATH"
