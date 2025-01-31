@@ -2,6 +2,7 @@
 
 # Configured MacOS settings to my personal preference
 # NOTE: Most of these settings only take effect after a restart
+# Helpful docs on these settings: https://macos-defaults.com/
 
 echo "Configuring macOS settings..."
 
@@ -13,6 +14,10 @@ defaults write -g com.apple.scrollwheel.scaling -float 20.0
 
 # Set key repeat speed (after key repeat delay is hit)
 defaults write -g KeyRepeat -float 1.0
+
+# Re: function keys. F1, F2, etc. behave as standard function keys. Press the fn key to use the special features printed on the key.
+# https://macos-defaults.com/keyboard/applekeyboardfnstate.html
+defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 
 # Restart necessary services to apply changes
 killall cfprefsd
