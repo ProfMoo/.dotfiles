@@ -9,6 +9,9 @@ echo "Configuring macOS settings..."
 # Disable Key Accent Menu
 defaults write -g ApplePressAndHoldEnabled -bool false
 
+# Hypothetically disabled the dictation popup. Unverified.
+defaults write com.apple.HIToolbox AppleFnUsageType -int "0"
+
 # Set scroll speed
 defaults write -g com.apple.scrollwheel.scaling -float 20.0
 
