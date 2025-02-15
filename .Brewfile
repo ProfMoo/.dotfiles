@@ -29,6 +29,7 @@ brew "kubie"
 brew "krew"
 brew "talosctl"
 brew "helm"
+brew "helmfile"
 brew "awscli"
 # This installs the FluxCD CLI (be careful of the normal brew 'flux', which installs something else)
 tap "fluxcd/tap"
