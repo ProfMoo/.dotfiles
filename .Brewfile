@@ -17,6 +17,7 @@ brew "ripgrep"
 brew "watch"
 brew "ykman"
 brew "yq"
+brew "mise"
 
 # Install tech-specific tooling
 brew "gh"
