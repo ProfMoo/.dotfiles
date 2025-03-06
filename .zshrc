@@ -76,6 +76,9 @@ export SAVEHIST=10000
 # Adding cilium shell completion
 . <(cilium completion zsh)
 
+# Initialize mise
+eval "$(mise activate zsh)"
+
 # Add any work-related configuration here
 # Some stuff doesn't make sense (or isn't a good idea) to check into a public repo.
 # Check if given file exists. If true, source the file
