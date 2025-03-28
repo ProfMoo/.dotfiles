@@ -12,6 +12,9 @@ export PATH="/opt/homebrew/bin:$PATH"
 export GOPATH="${HOME}/go"
 export PATH="$PATH:${GOPATH}/bin"
 
+# This environment variable tells Go to never download toolchains automatically and use only what's installed locally.
+export GOTOOLCHAIN=local
+
 # Adding kubectl krew plugin path to PATH
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 

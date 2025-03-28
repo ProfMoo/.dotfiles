@@ -41,4 +41,3 @@ brew "node"
 # Install a few helpful GUI apps
 cask "orbstack"
 cask "visual-studio-code"
-cask "gather"
