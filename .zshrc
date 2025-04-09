@@ -42,8 +42,8 @@ source $ZSH/oh-my-zsh.sh
 # Changing zsh bindings to emacs mode. ctrl-e and ctrl-a now work on command line
 bindkey -e
 
-# Setting default editor to VSCode
-export EDITOR='code -w'
+# Setting default editor to Cursor
+export EDITOR='cursor -w'
 
 # Edit and source zsh configs quickly
 alias ,ez='$EDITOR ~/.zshrc'

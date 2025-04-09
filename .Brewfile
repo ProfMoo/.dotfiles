@@ -24,7 +24,6 @@ brew "gh"
 brew "temporal"
 brew "tctl"
 brew "hadolint"
-brew "go"
 brew "kubernetes-cli"
 brew "kubie"
 brew "krew"
@@ -36,8 +35,8 @@ brew "awscli"
 tap "fluxcd/tap"
 brew "fluxcd/tap/flux"
 brew "cilium-cli"
-brew "node"
 
 # Install a few helpful GUI apps
 cask "orbstack"
 cask "visual-studio-code"
+
