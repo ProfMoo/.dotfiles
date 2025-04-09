@@ -28,11 +28,6 @@
       stdin: true
       stdout: true
       stderr: true
-    - description: Install golang tooling
-      command: scripts/install_golang_tooling
-      stdin: true
-      stdout: true
-      stderr: true
     - description: Downloading zsh plugins
       command: bash scripts/download_zsh_plugins
       stdout: true
