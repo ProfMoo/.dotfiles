@@ -31,6 +31,7 @@ brew "talosctl"
 brew "helm"
 brew "helmfile"
 brew "awscli"
+brew "tfenv"
 # This installs the FluxCD CLI (be careful of the normal brew 'flux', which installs something else)
 tap "fluxcd/tap"
 brew "fluxcd/tap/flux"
