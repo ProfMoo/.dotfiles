@@ -17,12 +17,14 @@ brew "ripgrep"
 brew "watch"
 brew "ykman"
 brew "yq"
+brew "gh"
 brew "mise"
 
-# Install tech-specific tooling
-brew "gh"
-brew "temporal"
+# Install project-specific tooling
+# I might be able to remove all of these in favor of 'mise' configuration
+# in each project in the future.
 brew "tctl"
+brew "temporal"
 brew "hadolint"
 brew "kubernetes-cli"
 brew "kubie"
