@@ -1,0 +1,5 @@
+# Local-only zsh config (work-specific aliases, secrets, etc.)
+# Tracked: README and example file. Everything else is ignored.
+.zsh/local/*
+!.zsh/local/README.md
+!.zsh/local/example.zsh
