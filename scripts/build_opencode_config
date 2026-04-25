@@ -71,5 +71,4 @@ concat_md() {
 }
 
 merge_json "opencode"
-merge_json "tui"
 concat_md  "AGENTS.md"

@@ -15,13 +15,15 @@ Deep-merges `shared/<name>.base.json` + `local/<name>.local.json` (local wins) �
 
 | Want to change | Edit | Then |
 |---|---|---|
-| Public JSON default (perms, keybinds, etc.) | `opencode/shared/*.base.json` | `scripts/build_opencode_config` |
-| Private JSON overlay (providers, MCPs, secrets) | `opencode/local/*.local.json` | `scripts/build_opencode_config` |
+| Public opencode.json default (perms, etc.) | `opencode/shared/opencode.base.json` | `scripts/build_opencode_config` |
+| Private opencode.json overlay (providers, MCPs, secrets) | `opencode/local/opencode.local.json` | `scripts/build_opencode_config` |
 | Public AGENTS.md | `opencode/shared/AGENTS.md` | `scripts/build_opencode_config` |
 | Private AGENTS.md additions | `opencode/local/AGENTS.md` | `scripts/build_opencode_config` |
 | Static shared file (dcp.jsonc, etc.) | `opencode/shared/<file>` | nothing — symlinked |
 | Add a new merged JSON `<name>.json` | create `shared/<name>.base.json`, optionally `local/<name>.local.json`, add `merge_json "<name>"` to `scripts/build_opencode_config` | `scripts/build_opencode_config` |
 | Add a new concat'd file | create `shared/<name>`, optionally `local/<name>`, add `concat_md "<name>"` to `scripts/build_opencode_config` | `scripts/build_opencode_config` |
+
+> **Not managed: `tui.json`** — cbcode regenerates it on each launch (adds its own plugins). Don't track or merge.
 
 ## Bootstrap on a new machine
 

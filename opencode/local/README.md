@@ -12,8 +12,8 @@ Everything in this directory (other than this README and `*.example` files) is
 
 * `opencode.local.json` — deep-merged into `opencode/shared/opencode.base.json`
   to produce `~/.config/opencode/opencode.json`. **Local wins on conflicts.**
-* `tui.local.json` — deep-merged into `opencode/shared/tui.base.json` to
-  produce `~/.config/opencode/tui.json`. Optional. See `tui.local.json.example`.
+* `AGENTS.md` — concatenated after `opencode/shared/AGENTS.md` to produce
+  `~/.config/opencode/AGENTS.md`.
 * `*.example` files — tracked, intended as templates.
 
 ## Workflow
