@@ -31,6 +31,7 @@ plugins=(
     aws
     kubectl
     helm
+    terraform
     docker
     golang
     kube-ps1
