@@ -32,6 +32,10 @@
       command: bash scripts/download_zsh_plugins
       stdout: true
       stderr: true
+    - description: Building OpenCode config from shared+local
+      command: scripts/build_opencode_config
+      stdout: true
+      stderr: true
     - description: Sourcing .zshrc
       command: source ~/.zshrc
       stdout: true
@@ -59,3 +63,16 @@
     ~/.config/tmux-powerline/config.sh:
       force: true
       path: tmux-powerline-config.sh
+    # OpenCode static (non-merged) shared files. opencode.json, tui.json, and
+    # AGENTS.md are not symlinked here — they are produced by
+    # scripts/build_opencode_config, which deep-merges JSON configs and
+    # concatenates AGENTS.md from opencode/shared/* and opencode/local/*.
+    ~/.config/opencode/dcp.jsonc:
+      force: true
+      path: opencode/shared/dcp.jsonc
+    ~/.config/opencode/babel.config.js:
+      force: true
+      path: opencode/shared/babel.config.js
+    ~/.config/opencode/plugin/done-sound.js:
+      force: true
+      path: opencode/shared/plugin/done-sound.js

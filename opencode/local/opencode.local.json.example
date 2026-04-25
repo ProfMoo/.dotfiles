@@ -1,0 +1,12 @@
+{
+  "_comment_": "Copy to opencode.local.json (no .example) and edit. Deep-merged into shared/opencode.base.json.",
+  "model": "anthropic/claude-3-7-sonnet-latest",
+  "enabled_providers": ["anthropic"],
+  "provider": {
+    "anthropic": {
+      "npm": "@ai-sdk/anthropic",
+      "name": "Anthropic"
+    }
+  },
+  "mcp": {}
+}

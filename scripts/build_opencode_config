@@ -1,0 +1,75 @@
+#!/bin/zsh
+# Build merged OpenCode configs from shared (tracked) + local (gitignored)
+# sources, then write the result to ~/.config/opencode/.
+#
+# Two merge strategies:
+#
+#   merge_json <name>   merges shared/<name>.base.json + local/<name>.local.json
+#                       via jq deep-merge (`.[0] * .[1]`); local wins on
+#                       conflicts; result -> $TARGET_DIR/<name>.json.
+#
+#   concat_md <name>    concatenates shared/<name> + local/<name> (text);
+#                       shared first, local appended; blank line between;
+#                       result -> $TARGET_DIR/<name>.
+#
+# In both cases, if the local file is missing the shared file is used as-is.
+
+set -euo pipefail
+
+REPO_DIR="${REPO_DIR:-$(cd "$(dirname "$0")/.." && pwd)}"
+SHARED_DIR="$REPO_DIR/opencode/shared"
+LOCAL_DIR="$REPO_DIR/opencode/local"
+TARGET_DIR="${OPENCODE_CONFIG_DIR:-$HOME/.config/opencode}"
+
+if ! command -v jq >/dev/null 2>&1; then
+  echo "build_opencode_config: jq is required but not installed" >&2
+  exit 1
+fi
+
+mkdir -p "$TARGET_DIR"
+
+merge_json() {
+  local name="$1"
+  local base="$SHARED_DIR/${name}.base.json"
+  local local_file="$LOCAL_DIR/${name}.local.json"
+  local target="$TARGET_DIR/${name}.json"
+
+  if [[ ! -f "$base" ]]; then
+    echo "build_opencode_config: missing base $base" >&2
+    return 1
+  fi
+
+  if [[ -f "$local_file" ]]; then
+    jq -s '.[0] * .[1]' "$base" "$local_file" > "$target.tmp"
+    echo "merged json: $base + $local_file -> $target"
+  else
+    cp "$base" "$target.tmp"
+    echo "copied json:  $base -> $target (no local overlay)"
+  fi
+  mv "$target.tmp" "$target"
+}
+
+concat_md() {
+  local name="$1"
+  local base="$SHARED_DIR/${name}"
+  local local_file="$LOCAL_DIR/${name}"
+  local target="$TARGET_DIR/${name}"
+
+  if [[ ! -f "$base" ]]; then
+    echo "build_opencode_config: missing base $base" >&2
+    return 1
+  fi
+
+  if [[ -f "$local_file" ]]; then
+    { cat "$base"; printf '\n'; cat "$local_file"; } > "$target.tmp"
+    echo "concat md:    $base + $local_file -> $target"
+  else
+    cp "$base" "$target.tmp"
+    echo "copied md:    $base -> $target (no local overlay)"
+  fi
+  mv "$target.tmp" "$target"
+}
+
+merge_json "opencode"
+merge_json "tui"
+concat_md  "AGENTS.md"

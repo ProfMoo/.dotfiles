@@ -1,5 +1,43 @@
+# ==============================================================================
 # Local-only zsh config (work-specific aliases, secrets, etc.)
 # Tracked: README and example file. Everything else is ignored.
+# ==============================================================================
 .zsh/local/*
 !.zsh/local/README.md
 !.zsh/local/example.zsh
+
+# ==============================================================================
+# Local-only OpenCode overlay (work providers, MCP secrets, etc.).
+# Merged with opencode/shared/*.base.json by scripts/build_opencode_config.
+# Tracked: README and *.example template files only.
+# ==============================================================================
+opencode/local/*
+!opencode/local/README.md
+!opencode/local/*.example
+
+# ==============================================================================
+# OS / editor cruft
+# ==============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor swap / backup files
+*.swp
+*.swo
+*.bak
+*.tmp
+*~
+
+# Editor / IDE settings (kept user-local)
+.vscode/
+.idea/
+
+# Environment / secrets dropped anywhere by mistake
+.env
+.env.*
+!.env.example

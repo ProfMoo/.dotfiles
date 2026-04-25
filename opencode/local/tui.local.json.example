@@ -1,0 +1,4 @@
+{
+  "_comment": "Optional. If you create tui.local.json (no .example) it gets deep-merged into tui.json after the shared base. Use to add work-only plugins or override keybinds.",
+  "plugin": []
+}

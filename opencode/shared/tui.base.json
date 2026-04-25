@@ -1,0 +1,12 @@
+{
+  "$schema": "https://opencode.ai/tui.json",
+  "keybinds": {
+    "leader": "ctrl+x"
+  },
+  "plugin": [
+    "./plugin/done-sound.js"
+  ],
+  "plugin_enabled": {
+    "internal:home-tips": false
+  }
+}
