@@ -40,5 +40,4 @@ brew "fluxcd/tap/flux"
 brew "cilium-cli"
 
 # Install a few helpful GUI apps
-cask "orbstack"
 cask "visual-studio-code"
