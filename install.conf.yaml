@@ -36,6 +36,10 @@
       command: scripts/build_opencode_config
       stdout: true
       stderr: true
+    - description: Installing OpenCode/agent skills
+      command: scripts/install_skills
+      stdout: true
+      stderr: true
     - description: Sourcing .zshrc
       command: source ~/.zshrc
       stdout: true

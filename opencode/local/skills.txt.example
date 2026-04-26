@@ -1,0 +1,4 @@
+# Local-only skills. Copy to skills.txt (no .example) and add work-only repos.
+# Format: one <github-org>/<repo> per line. Blank lines and # comments ignored.
+
+# example/internal-skill

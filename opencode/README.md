@@ -25,6 +25,23 @@ Deep-merges `shared/<name>.base.json` + `local/<name>.local.json` (local wins) �
 
 > **Not managed: `tui.json`** — cbcode regenerates it on each launch (adds its own plugins). Don't track or merge.
 
+## Skills
+
+`scripts/install_skills` installs agent skills via `npx skills add <repo>`.
+
+| Want to | Edit |
+|---|---|
+| Add a public skill (shared across machines) | `opencode/shared/skills.txt` |
+| Add a private/work skill | `opencode/local/skills.txt` (gitignored; see `skills.txt.example`) |
+
+Run manually any time:
+
+```sh
+scripts/install_skills
+```
+
+Auto-runs on `./install`. Idempotent — re-installing an existing skill updates it.
+
 ## Bootstrap on a new machine
 
 ```sh

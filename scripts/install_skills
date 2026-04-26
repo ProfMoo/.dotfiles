@@ -1,0 +1,56 @@
+#!/bin/zsh
+# Install OpenCode/agent skills declared in opencode/shared/skills.txt and
+# (optionally) opencode/local/skills.txt via `npx skills add`.
+#
+# Manifest format (one entry per line):
+#   <github-org>/<repo>            # standard github source
+#   # comment lines are ignored
+#   <empty lines are ignored>
+#
+# `npx skills add` is idempotent: re-installing an already-present skill
+# updates it (or no-ops). Safe to run on every dotbot ./install.
+
+set -euo pipefail
+
+REPO_DIR="${REPO_DIR:-$(cd "$(dirname "$0")/.." && pwd)}"
+SHARED_FILE="$REPO_DIR/opencode/shared/skills.txt"
+LOCAL_FILE="$REPO_DIR/opencode/local/skills.txt"
+
+if ! command -v npx >/dev/null 2>&1; then
+  echo "install_skills: npx is required but not installed" >&2
+  exit 1
+fi
+
+collect_skills() {
+  local file="$1"
+  [[ -f "$file" ]] || return 0
+  # Strip comments + blanks; trim whitespace.
+  awk '
+    { sub(/#.*$/, ""); gsub(/^[[:space:]]+|[[:space:]]+$/, "") }
+    NF > 0 { print }
+  ' "$file"
+}
+
+skills=()
+while IFS= read -r line; do
+  [[ -n "$line" ]] && skills+=("$line")
+done < <(collect_skills "$SHARED_FILE")
+
+while IFS= read -r line; do
+  [[ -n "$line" ]] && skills+=("$line")
+done < <(collect_skills "$LOCAL_FILE")
+
+if (( ${#skills[@]} == 0 )); then
+  echo "install_skills: no skills declared (looked at $SHARED_FILE, $LOCAL_FILE)"
+  exit 0
+fi
+
+: "${SKILL_AGENTS:=opencode}"   # comma-separated agents to install for; '*' for all
+
+echo "install_skills: installing ${#skills[@]} skill(s) for agent(s): $SKILL_AGENTS"
+for skill in "${skills[@]}"; do
+  echo "  -> $skill"
+  # -g: global install   -a: target agent(s)   -y: no prompts   --skill '*': install every SKILL.md in repo
+  npx --yes skills add "$skill" -g -a "$SKILL_AGENTS" -s '*' -y
+done
+echo "install_skills: done"

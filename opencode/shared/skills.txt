@@ -1,0 +1,9 @@
+# Skills to install via `npx skills add <repo>`.
+# Format: one <github-org>/<repo> per line. Blank lines and # comments ignored.
+# Installed into ~/.agents/skills/<name>/SKILL.md by `scripts/install_skills`.
+
+# Communication style
+JuliusBrussee/caveman
+
+# Discover and install other skills
+vercel-labs/skills
