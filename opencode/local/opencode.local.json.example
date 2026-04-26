@@ -1,5 +1,5 @@
 {
-  "_comment_": "Copy to opencode.local.json (no .example) and edit. Deep-merged into shared/opencode.base.json.",
+  "_comment_": "Copy to opencode.local.json (no .example) and edit. Deep-merged into shared/opencode.base.json. Then remove this _comment_ key",
   "model": "anthropic/claude-3-7-sonnet-latest",
   "enabled_providers": ["anthropic"],
   "provider": {
