@@ -19,6 +19,7 @@
       "grep *": "allow",
       "echo *": "allow",
       "make *": "allow",
+      "pwd": "allow",
       "ls *": "allow",
       "sort *": "allow",
       "find *": "allow",
