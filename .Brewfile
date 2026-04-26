@@ -19,6 +19,7 @@ brew "ykman"
 brew "yq"
 brew "gh"
 brew "mise"
+brew "opencode"
 
 # Install project-specific tooling
 # I might be able to remove all of these in favor of 'mise' configuration
