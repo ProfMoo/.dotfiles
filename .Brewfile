@@ -19,6 +19,7 @@ brew "ykman"
 brew "yq"
 brew "gh"
 brew "mise"
+brew "uv"
 brew "opencode"
 
 # Install project-specific tooling
