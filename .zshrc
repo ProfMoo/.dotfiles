@@ -88,6 +88,8 @@ eval "$(mise activate zsh)"
 # Check if given file exists. If true, source the file
 [[ -s "$HOME/.work/general.zsh" ]] && source "$HOME/.work/general.zsh"
 
+source "$HOME/.zsh/brew-switch.zsh"
+
 # Telling the oh-my-zsh fzf plugin where to find fzf
 export FZF_BASE=$(which fzf)
 
