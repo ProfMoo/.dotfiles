@@ -10,17 +10,13 @@ Designed to be idempotent, so you should be able to safely run this multiple tim
 
 ## Git Config
 
-The tracked `git/.gitconfig` contains only shared, non-secret defaults. It always
-loads `~/.gitconfig.local` last.
+The tracked `git/.gitconfig` contains shared, cross-machine defaults.
 
-Use `~/.gitconfig.local` for every private or machine-specific Git setting:
+In contrast, use `~/.gitconfig.local` for every private or machine-specific Git setting:
 
 * personal/work identity
 * signing keys
 * internal Git URLs
-* credential helpers, proxies, and tokens
-* editor, diff/merge tools, and local paths
-* optional `includeIf` rules for separate personal/work files
 
 Dotbot creates ignored `git/.gitconfig.local` from `git/.gitconfig.local.example`
 if missing, then symlinks `~/.gitconfig.local` to it.
