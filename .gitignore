@@ -41,3 +41,6 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+
+# Local-only Git config override. Template lives in git/.gitconfig.local.example.
+git/.gitconfig.local

@@ -1,0 +1,22 @@
+# Common cross-machine Git config. Loaded onto every machine.
+
+[init]
+	defaultBranch = master
+
+[pull]
+	ff = only
+
+[fetch]
+	prune = true
+
+[merge]
+	conflictStyle = diff3
+
+[rerere]
+	enabled = true
+
+[commit]
+	gpgSign = true
+
+[include]
+	path = ~/.gitconfig.local
