@@ -6,14 +6,29 @@
 [pull]
 	ff = only
 
+[branch]
+    sort = -committerdate
+
 [fetch]
 	prune = true
 
 [merge]
 	conflictStyle = diff3
 
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+
 [rerere]
 	enabled = true
+	autoupdate = true
+
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
 
 [commit]
 	gpgSign = true
