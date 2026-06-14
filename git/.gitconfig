@@ -1,5 +1,4 @@
-# Public Git config. Keep identities, tokens, proxies, signing keys, and
-# company-specific settings in private include files.
+# Common cross-machine Git config. Loaded onto every machine.
 
 [init]
 	defaultBranch = master
