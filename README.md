@@ -26,7 +26,3 @@ Before running `./install`, move any private values from an existing
 
 Keep company email, signing keys, internal URLs, proxies, and tokens out of the
 tracked config. Put them in `~/.gitconfig.local` instead.
-
-## TODO
-
-* Ensure the Last.FM API Key isn't leaked
