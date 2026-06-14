@@ -1,0 +1,23 @@
+# Public Git config. Keep identities, tokens, proxies, signing keys, and
+# company-specific settings in private include files.
+
+[init]
+	defaultBranch = master
+
+[pull]
+	ff = only
+
+[fetch]
+	prune = true
+
+[merge]
+	conflictStyle = diff3
+
+[rerere]
+	enabled = true
+
+[commit]
+	gpgSign = true
+
+[include]
+	path = ~/.gitconfig.local

@@ -13,6 +13,10 @@
       stdin: true
       stdout: true
       stderr: true
+    - description: Creating local Git config
+      command: test -e git/local || cp git/local.example git/local
+      stdout: true
+      stderr: true
     - description: Installing CLI tools & GUI programs
       command: scripts/install_tools
       stdin: true
@@ -61,6 +65,12 @@
     ~/.tmux.conf:
       force: true
       path: .tmux.conf
+    ~/.gitconfig:
+      force: true
+      path: git/config
+    ~/.gitconfig.local:
+      force: true
+      path: git/local
     ~/.Brewfile:
       force: true
       path: .Brewfile
