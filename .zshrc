@@ -95,3 +95,4 @@ export FZF_BASE=$(which fzf)
 
 # Add aliases
 source "$HOME/.zsh/aliases.zsh"
+alias docker='podman'
