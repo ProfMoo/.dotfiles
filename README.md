@@ -8,7 +8,18 @@
 
 Designed to be idempotent, so you should be able to safely run this multiple times.
 
-## TODO
+## Git Config
 
-* Figure out a way to check in .gitconfig without including any work-specific details.
-* Ensure the Last.FM API Key isn't leaked
+The tracked `git/.gitconfig` contains shared, cross-machine defaults.
+
+In contrast, use `~/.gitconfig.local` for every private or machine-specific Git setting:
+
+* personal/work identity
+* signing keys
+* internal Git URLs
+
+Dotbot creates ignored `git/.gitconfig.local` from `git/.gitconfig.local.example`
+if missing, then symlinks `~/.gitconfig.local` to it.
+
+Keep company email, signing keys, internal URLs, proxies, and tokens out of the
+tracked config. Put them in `~/.gitconfig.local` instead.

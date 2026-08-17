@@ -12,6 +12,7 @@ if [[ $(uname -a) == *x86_64* ]]; then
         brew update
     fi
 
+    brew trust fluxcd/tap
     brew bundle --global
 elif [[ $(uname -a) == *aarch64* ]]; then
     echo "Determined CPU architecture to be 'ARM' and OS to be Linux, using ..."
@@ -35,6 +36,7 @@ elif [[ $(uname -a) == *arm64* ]]; then
         brew update
     fi
 
+    brew trust fluxcd/tap
     brew bundle --global
 else
     echo "Unsupported/unknown CPU architecture"

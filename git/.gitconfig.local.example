@@ -1,0 +1,17 @@
+# Template for ignored git/.gitconfig.local, which Dotbot symlinks to ~/.gitconfig.local.
+#
+# Your machine-specific config should look like this file and be names `.gitconfig.local` in this same directory
+
+# Machine defaults:
+# [core]
+#	editor = nvim
+
+# Personal defaults for repos under ~/code/:
+# [includeIf "gitdir:~/code/"]
+#	path = ~/.gitconfig.personal
+
+# Optional: keep identity inline here instead of separate include files.
+# [user]
+#	name = Your Name
+#	email = you@example.com
+#	signingKey = KEY_ID
